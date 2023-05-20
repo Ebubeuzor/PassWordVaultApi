@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="Style/style.css">
+</head>
+<body>
+    
+
+    <main id="main-area">
+
+    <!-- register area -->
+    <section id="register">
+        <div id="row" class="row m-0">
+            <div class="register-con">
+                <div class="text-center pd-5">
+                    <h1 class="login-title text-dark" >Registeration</h1>
+                    <p class="p-1 m-0 font-ubuntu text-black-50">Register and enjoy additional features</p>
+                    <span class="p-1 m-0 font-ubuntu text-black-50">I already have <a href="SignIn.html">Login</a> </span>
+                </div>
+                <div class="upload-profile-image d-flex justify-content-center pd-5">
+                    <div class="text-center">
+                        <div class="d-flex justify-content-center">
+                            <img src="images/camera-solid.svg" alt="camera" class="camera-icon" />
+                        </div>
+                        <img src="images/user.png" alt="profile" class="img rounded-circle" />
+                        <small class="form-text text-black-50">Choose image</small>
+                        <input form="reg-form" type="file" class="form-control-file" name="profileUpload" id="upload-profile">
+                    </div>
+                </div>
+                <div class="d-flex justify-context-center">
+                    <form id="reg-form" method="post" onsubmit="return false;">
+                        <div class="form-row">
+                            <div class="col">
+                                <input type="text" name="firstName" id="firstName" class="form-control" placeholder="First Name">
+                            </div>
+
+                            <div class="col">
+                                <input type="text" name="lastName" id="lastName" class="form-control" placeholder="Last Name">
+                            </div>
+                        </div>
+
+                        <div class="form-row my-4">
+                            <div class="col">
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Email">
+                            </div>
+                        </div>
+
+                        <div class="form-row my-4">
+                            <div class="col abs">
+                                <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+                                <small id="Confirm_error"></small>
+                                
+                                <div class="img-con eyebtn">
+                                    <img src="images/eye-solid.svg"  class="eyes" width="100%" height="100%" />
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row my-4">
+                            <div class="col abs">
+                                <input type="password" name="confirm_pwd" id="confirm_pwd" class="form-control" placeholder="Confirm Password">
+                                
+                                <div class="img-con eyebtn2">
+                                    <img src="images/eye-solid.svg" class="eyes2" width="100%" height="100%" />
+                                </div>
+                                <div class="server-error" id="server_error"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox" name="agreement" class="form-check-input" required />
+                            <label for="agreement" class="form-check-label font-ubuntuvtext-black-50">I agree <a href="#">terms, conditions and policy</a> (*)</label>
+                        </div>
+
+                        <div><input type="hidden" name="crud_req" value="signup"></div>
+                        
+                        <div class="submit-btn text-center my-5">
+                            <button type="submit" id="submitBTN" name="submitBTN" class="btn rounded-pill text-white bg-success px-5">Continue</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- #register area -->
+
+    </main>
+
+
+<!-- JavaScript Bundle with Popper -->
+<script src="javaScript/myjquery.js"></script>
+<script src="javaScript/main.js"></script>
+<script src="javaScript/Signup.js"></script>
+</body>
+</html>

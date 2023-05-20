@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home Page</title>
+	<style>
+		body{
+		font-family: "open Sans",sans-serif;
+		margin: 0px;
+		padding: 0px;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+        
+	
+		
+		
+		background: linear-gradient(109.5deg, rgb(13, 11, 136) 9.4%, rgb(86, 255, 248) 78.4%);
+	}
+
+
+
+
+
+
+
+		.bird_box{
+			position: relative;
+			height: 650px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			
+			
+			/*(Starts) below this is a very important piece of code*/
+			background-attachment: fixed;
+			overflow: hidden;
+
+			/*(ends) Landscape parallax effect*/
+
+		}
+		.fore_bird{
+
+			/* justify-content: center;
+			align-items: center;
+			display: flex; */
+
+			padding: 100px;
+			max-width: 640px;
+			margin: 0 auto;
+			text-align: left;
+/* 
+			background-color: aliceblue; */
+		
+		
+	
+	
+
+	}
+	h1{
+		color: #ccc;
+		font-weight: 300;
+		font-size: 90px;
+		font-family:'Trebuchet MS',sans-serif;
+
+	}
+	#btn{
+			
+			outline-style: ridge;
+			margin-top: 40px;
+			transition: 0.7s;
+			width: 150px;
+			height: 30px;
+			border: none;
+			margin-left: 40px;
+
+
+			/* position: relative; */
+		
+			
+
+
+					
+			background: transparent;
+			color: black;
+			outline-color:white;
+		}
+		#btn:hover{
+			background-color:#2ecc71 ;
+			transform: scale(1.1);
+			transition: 0.7s;
+			color: beige;}
+
+
+		@keyframes slide{
+			0%{
+				opacity: 0;
+				transform: translateX(-200px);
+				transition: 0.7s ease-in-out ;
+
+			}
+			100%{
+				opacity: 1;
+				transform: translateX(0px);
+
+
+			}
+		}	
+		@keyframes slideR{
+			0%{
+				opacity: 0;
+				transform: translateX(200px);
+				transition: 0.7s ease-in-out ;
+			}
+			100%{
+				opacity: 1;
+				transform: translateX(0px);
+			
+
+
+			}
+		}	
+
+
+		.btn1{
+
+			animation-name: slide;
+			animation-duration: 1s;
+		}
+		
+
+		img{
+		
+		
+			height: 100%;
+	
+		
+		}
+		.logo{
+			
+			position: absolute;
+			background-color: transparent;
+			width: 800px;
+			top:30%;
+			left: 49%;
+			height: 88%;
+			animation-name: slideR;
+			animation-duration: 1s;
+			
+		}
+
+		p{
+			color: white;
+			opacity: 0.8;
+		}
+		
+
+
+
+
+
+	</style>
+	<link rel="stylesheet" type="text/css" href="Style/Home.css">
+</head>
+<body>
+	<div id="article">
+
+		<div class="bird_box">
+		
+			<div class="fore_bird">
+				<h1>Password Vault.</h1>
+				<p> Why Remember all your Password when all you need to do is Remember One ?</p>
+				<p> With Password Vault all your Passwords are secure. So let us do the Remembring </p>
+				<p></p>
+				<button id="btn" class="btn1 getStarted">Get Started</button>
+			</div>
+			<div class="logo">
+				<img src="images/home (2).png">
+			</div>
+			
+		</div>
+	
+
+	</div>
+
+	<script src="javaScript/home.js"></script>
+
+</body>
+</html>

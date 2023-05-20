@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>Vault</title>
+        <style>
+            *{
+			padding: 0px;
+			margin: 0px;
+		    }
+            body{
+/*			background-color:whitesmoke;*/
+			/* background-color:lightskyblue; */
+            background: linear-gradient(90.6deg, rgb(120, 143, 251) 11.2%, rgb(133, 235, 255) 91.1%);
+			
+		}
+             
+            #article{
+                /* padding: 100px; */
+                max-width: 500px;
+                margin: 0 auto;
+                margin-top: 10%;
+                height: auto;
+                border-radius: 25px;
+                padding-top: 20px;
+                text-align: center;
+/*                box-shadow: 0 12.5px 10px rgba(0, 0, 0, 0.06);*/
+                box-shadow: 0 0 25px 0.2px rgba(0, 0, 0, 0.3);
+                background-color: rgba(255, 255, 255,0.7);
+                /* background-color:rgba(157, 205, 221,0.2); */
+                box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),0 6.7px 5.3px rgba(0, 0, 0, 0.048),0 12.5px 10px rgba(0, 0, 0, 0.06),0 22.3px 17.9px rgba(0, 0, 0, 0.072),0 41.8px 33.4px rgba(0, 0, 0, 0.086),0 100px 80px rgba(0, 0, 0, 0.12);
+
+                /* background-color: blue; */
+            }
+            button{
+                /* text-align: center; */
+                width:35%;
+				height: 45px;
+                border-radius: 45px; 
+				margin-left:15px;
+				color: whitesmoke;
+				/* font-weight: bold; */
+				outline: none;
+				text-align: center;
+				/* padding-left: 20px; */
+				font-size: 15px;
+				transition: 0.7s;
+				cursor: pointer;
+                /* padding: 10px;	 */
+                /* outline-style: ridge; */
+                outline-style: none;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                transition: 0.4s;
+                border: none;             
+                background: transparent; 
+                /* outline-color: rgba(103, 212, 229, 0.7); */
+
+            }
+            #btn1:hover{
+                box-shadow: 0 0 25px 0.3px rgba(21, 180, 233, 0.5) ;
+                transition: 0.4s;
+                color: white;
+
+            }
+            #btn2:hover{
+                box-shadow: 0 0 25px 0.3px rgba(78, 187, 124, 0.5) ;
+                transition: 0.4s;
+                color: white;
+                /* transform: scale(1.0); */
+               
+
+            }
+        
+            .container {
+            position: absolute;
+            width: 30%;
+            background-color: transparent;
+            display: flex;
+            top: 8%;
+            left: 35%;
+            
+         
+            justify-content: center;
+            padding-bottom: 10px;
+          
+            /* border-radius:100%; */
+            
+            }
+
+            .img-con{
+                width: 170px;
+                height: 170px;
+            }
+
+            .image {
+                width: 100%;
+                height: 100%;
+                z-index: 0;
+                transition: .5s ease;
+            }
+
+            .middle {
+                transition: .5s ease;
+                position: absolute;
+                top: 50%;
+                width: 20%;
+                opacity: 0.6;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                text-align: center;
+            }
+
+            .container:hover .image {
+                opacity: 0.4;
+            }
+
+            .container:hover .middle {
+            opacity: 1;
+            }
+
+            .text {
+                z-index: 1111;
+                color: white;
+                font-size: 14px;
+                padding-top:  12px;
+                padding-bottom:  12px;
+            }
+
+            .camera-icon-con:hover .camera-icon{
+                filter: invert(100%) !important;
+            }
+
+            input{
+                /* border-radius: 5px; */
+                border:1px solid;
+                /* outline-color: rgb(96, 96, 231); */
+                width: 60%;
+                height: 20px;
+                padding-left: 10px;
+                border-color: rgb(18, 17, 17);
+                color:teal;
+                color:rgb(79, 75, 75);
+                background-color: lightblue;
+                   transition: 0.7s;
+            }
+
+            input::placeholder{
+			color: rgba(21, 21, 21, 0.3);
+            color:teal;
+			padding: 10px;
+			margin-left: 0px;
+			
+
+	    }
+
+        .top{
+            font-size: smaller;
+            position: absolute;
+            pointer-events: none;
+            left: 100px;
+            top: 3px;
+            color: grey;
+          
+            
+
+        }
+          
+
+        </style>
+         <!-- rgb(21, 180, 233);    rgb(96, 243, 169);-->
+         <link rel="stylesheet" type="text/css" href="Style/prompt.css">
+
+
+
+
+    </head>
+    <body>
+        <div id="Tcont">
+            <div id="article">
+
+                    <div class="container"> 
+       
+                        <p><input type="file" form="update" name="imageFile" id="file" style="display: none;"></p>
+                        <div class="img-con">
+                            <img src="images/bg(3).jpg" id="output" alt="Avatar" class="image" style="border-radius: 50%;">
+                        </div>
+                        <div class="middle">
+                            <div class="text"><label for="file" class="camera-icon-con" style="cursor: pointer;"><img src="images/camera-solid.svg" alt="camera" class="camera-icon" /></label></div>
+                        </div>
+
+                    </div>
+                
+                    <div id="tr" style="margin-top: 120px;">
+                        <form id="update" method="post" enctype="multipart/form-data" onsubmit="return false;">
+                            <div style="position: relative;">
+                                <span class="top" >First name</span><br>
+                                <input type="text" name="firstname" id="firstname" placeholder="First name">
+                                <span></span>
+                            </div> 
+
+                            <div style="position: relative;">
+                                <span class="top" >Last name</span><br>
+                                <input type="text" name="lastname" id="lastname" placeholder="Last name">
+                                <span></span>
+                            </div> 
+
+                             <div style="position: relative;">
+                                <span class="top"  >Email </span><br>
+                                <input type="email" name="email" id="email" placeholder="Email">
+                                <span></span>
+                            </div>
+
+                            <div><input type="hidden" name="crud_req" value="update"></div>
+                            
+                            <div class="server-error" id="server_error"></div>
+
+                            <button type="submit" id="btn2" style="  background: linear-gradient(90.6deg, rgb(120, 143, 251) 11.2%, rgb(133, 235, 255) 91.1%);">Save</button>
+                         </form>
+                    </div>
+                
+            </div>
+
+        </div>
+        
+        <script src="javaScript/edit.js"></script>
+        <script src="javaScript/myjquery.js"></script>
+        <script>
+            $(document).ready(function () {
+                let $camera = $(".camera-icon")
+                let $uploadFile = $("#file")
+                $uploadFile.change(function(){
+                    readURL(this);
+                    $camera.hide();
+                });
+                
+                function readURL(input) {
+                    if (input.files && input.files[0]) {
+                        let reader = new FileReader();
+                        reader.onload = function(e){
+                            $(".img-con img").attr('src',e.target.result);
+                        }
+                        reader.readAsDataURL(input.files[0]);
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

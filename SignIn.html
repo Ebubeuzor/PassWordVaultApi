@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="Style/style.css">
+</head>
+<body>
+
+    <main id="main-area">
+
+        <!-- register area -->
+        <section id="register" class="login-con">
+            <div id="row" class="row m-0">
+                <div class="register-con ">
+                    <div class="text-center pd-5">
+                        <h1 class="login-title text-dark" >Login</h1>
+                        <p class="p-1 m-0 font-ubuntu text-black-50">Login and enjoy additional features</p>
+                        <span class="p-1 m-0 font-ubuntu text-black-50">Create a new <a href="SignUp.html">Account</a> </span>
+                    </div>
+                    <div class="upload-profile-image d-flex justify-content-center pd-5">
+                        <div class="text-center">
+                            <img src="images/user.png" alt="profile" class="img rounded-circle" />
+                        </div>
+                    </div>
+                    <div class="login-form">
+                        <form method="post" onsubmit="return false;">
+                        
+                            <div class="form-row my-4">
+                                <div class="col">
+                                    <input type="email" required name="email" id="email" class="form-control" placeholder="Email">
+                                </div>
+                            </div>
+
+                            <div class="form-row my-4">
+                                <div class="col abs">
+                                    <input type="password" required name="password" id="password" class="form-control" placeholder="Password">
+                                    <small id="Confirm_user"></small>
+
+                                    <div class="img-con eyebtn">
+                                        <img src="images/eye-solid.svg"  class="eyes" width="100%" height="100%" />
+                                    </div>
+                                    <div class="server-error" id="server_error"></div>
+                                </div>
+                            </div>
+
+                            <div><input type="hidden" name="crud_req" value="login"></div>
+
+                            <div class="submit-btn text-center my-5">
+                                <button type="submit" name="submitBTN" id="submitBTN" class="btn rounded-pill text-white bg-success px-5">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- #register area -->
+
+    </main>
+
+    <script src="javaScript/myjquery.js"></script>
+    <script src="javaScript/main.js"></script>
+    <script src="javaScript/login.js"></script>
+</body>
+</html>

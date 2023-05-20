@@ -1,0 +1,115 @@
+@media screen and (max-width: 600px) {
+    #article{
+        /* padding: 100px; */
+        width: 90%;
+        margin: 100px auto;
+    }
+
+    #user_img_con{
+        width: 100px;
+        height: 100px;
+    }
+
+    #user_img_con img{
+        width: 100%;
+        height: 100%;
+    }
+
+
+    table {
+        /* border-collapse: collapse; */
+        width: 100%;
+        /* table-layout: fixed; */
+        }
+        td {
+            overflow: hidden;
+            font-size:x-small;
+        }
+
+
+        #edit_img{
+            width: 15px;
+            height: 15px;
+        }
+        
+        th, td {
+            text-align: left;
+            padding:3px;
+          
+
+            }
+/* 
+            tr:nth-child(even){background-color: #f2f2f2} */
+
+            th {
+            background-color:blue;
+            /* color: white; */
+            
+            }
+
+
+
+
+            #task button{
+                /* text-align: center; */
+                width:60%;
+                height: 30px;
+                margin-top: 10px;
+                color: black;
+                font-weight: bold;
+                outline: none;
+                border: 0px;
+                text-align: left;
+                padding-left: 5px;
+                font-size: 11px;
+                transition: 0.7s;
+                
+                /* padding: 10px; */
+            }
+
+
+
+
+             #Profile{
+                padding:0;
+            }
+            
+            .container{
+                flex: 50%;
+             }
+
+
+            .upload-profile-image{
+                position: relative;
+                width: 60%;
+                height: 60%;
+                margin-top: 15px;
+                margin-left: auto;
+                margin-right: auto;
+                transition: filter .8s ease-in-out;
+                border-radius: 0%;
+            }
+
+
+                 .upload-profile-image img {
+                width: 50px;
+                height: 50px;
+            }
+               
+            .div_class{
+                margin: 10px;
+                /* overflow-x: ; */
+            } 
+
+
+
+}
+
+
+              
+
+
+
+
+
+  
